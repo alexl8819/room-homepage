@@ -7,7 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Room homepage</title>
-
+  <link rel="stylesheet" href="../node_modules/@fontsource/league-spartan/500.css" />
+  <link rel="stylesheet" href="../node_modules/@fontsource/league-spartan/600.css" />
+  <link rel="stylesheet" href="../node_modules/@fontsource/league-spartan/700.css" />
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,45 +17,38 @@
   </style>
 </head>
 <body>
-  Home
-  Shop
-  About
-  Contact
+  <main class="">
+    <header class="">
+      <nav class="">
+        <ol class="">
+          <li>Home</li>
+          <li>Shop</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ol> 
+      </nav>
+      <img src="./images/logo.svg" alt="site logo" />
+    </header>
+    <section class="">
+      <h1 class="window__heading"></h1>
 
-  Discover innovative ways to decorate
+      <p class="window__content"></p>
+      
+      <button type="button" class="">Shop now</button>
+    </section>
+    <section>
+      <h1>About our furniture</h1>
 
-  We provide unmatched quality, comfort, and style for property owners across the country. 
-  Our experts combine form and function in bringing your vision to life. Create a room in your 
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
-
-  We are available all across the globe
-
-  With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-  store locator. Any questions? Don't hesitate to contact us today.
-
-  Shop now
-
-  Manufactured with the best materials
-
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-  experience in this industry, we understand what customers want for their home and office.
-
-  Shop now
-
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-  
-  <div class="attribution">
+      <p>Our multifunctional collection blends design and function to suit your individual taste.
+        Make each room unique, or pick a cohesive theme that best express your interests and what
+        inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+        or anything in between. Product specialists are available to help you create your dream space.</p>
+    </section>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">slightlyfunctional</a>.
+  </footer>
+  <script type="module" src="slider.js"></script>
 </body>
 </html>

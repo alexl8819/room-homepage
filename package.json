@@ -2,8 +2,11 @@
   "name": "room-homepage-master",
   "version": "1.0.0",
   "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build --public-url ./ --dist-dir public",
     "lint": "stylelint '**/*.css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

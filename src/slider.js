@@ -6,27 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind next/prev buttons
   const nextBtn = document.querySelector('.slider__next');
   const prevBtn = document.querySelector('.slider__prev');
+  const itemArr = Array.from(items);
   nextBtn.addEventListener('click', () => {
-    if (marker >= items.size) {
-      return;
-    }
-    applyContent(Array.from(items)[marker++]);
+    marker = marker >= items.size - 1 ? 0 : ++marker;
+    applyContent(itemArr[marker]);
   });
   prevBtn.addEventListener('click', () => {
-    if (marker <= 0) {
-      return;
-    }
-    applyContent(Array.from(items)[marker--]);
+    marker = marker <= 0 ? items.size - 1 : --marker;
+    applyContent(itemArr[marker]);
   });
-  applyContent(Array.from(items)[marker]);
+  applyContent(itemArr[marker]);
 });
 
 function applyContent (selected) {
   if (!selected) {
     throw new Error('Invalid item selected: null or undefined');
   }
-  const headingEl = document.querySelector('.window__heading');
-  const contentEl = document.querySelector('.window__content');
+  
+  const heroEl = document.querySelector('.slider__hero');
+
+  for(const [_, className] of heroEl.classList.entries()) {
+    if (className.indexOf('bg-mobile-hero') > -1) {
+      heroEl.classList.remove(className);
+      console.log('removing ' + className);
+    }
+  }
+
+  heroEl.classList.add(selected.hero);
+
+  const headingEl = document.querySelector('.slider__heading');
+  const contentEl = document.querySelector('.slider__content');
   headingEl.innerText = selected.heading;
   contentEl.innerText = selected.content;
 }

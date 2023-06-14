@@ -19,7 +19,7 @@
 </head>
 <body>
   <main class="flex flex-col justify-center items-center min-h-screen font-league-spartan">
-    <div class="w-full max-width-xs">
+    <div class="w-full max-width-xs lg:max-width-5xl">
       <header class="slider__hero flex flex-col justify-between w-full h-96 bg-no-repeat bg-cover">
         <nav class="hidden">
           <ol class="list-style-none flex flex-row">
@@ -34,24 +34,27 @@
           <img class="w-14" src="./images/logo.svg" alt="site logo" />
         </div>
         <div class="flex flex-row justify-end">
-          <button type="button" class="slider__prev flex justify-center bg-black w-12 p-2">
+          <button type="button" class="slider__prev flex justify-center bg-black w-12 p-5">
             <img src="./images/icon-angle-left.svg" alt="arrow left slider button" />
           </button>
-          <button type="button" class="slider__next flex justify-center bg-black w-12 p-2">
+          <button type="button" class="slider__next flex justify-center bg-black w-12 p-5">
             <img src="./images/icon-angle-right.svg" alt="arrow right slider button" />
           </button>
         </div>
       </header>
-      <section class="py-12 px-8">
-        <h1 class="slider__heading text-4xl font-semibold tracking-tight"></h1>
-        <p class="slider__content text-dark-gray my-4"></p>
+      <section class="py-12 px-6">
+        <h1 class="slider__heading text-4xl font-semibold tracking-tight">Discover innovative ways to decorate</h1>
+        <p class="slider__content text-dark-gray my-4">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
         
-        <button type="button" class="tracking-[.75em] uppercase">Shop now</button>
+        <button type="button" class="flex flex-row items-center">
+          <p class="tracking-[.75em] uppercase">Shop now</p>
+          <img class="w-10 h-2.5 ml-4" src="./images/icon-arrow.svg" alt="right arrow icon" />
+        </button>
       </section>
       <div class="w-full">
         <img src="./images/image-about-dark.jpg" alt="about description showing table in the dark" />
-        <section class="py-12 px-8">
-          <h1 class="text-md font-semibold tracking-widest uppercase">About our furniture</h1>
+        <section class="py-12 px-6">
+          <h1 class="text-sm font-bold tracking-[.45em] uppercase">About our furniture</h1>
   
           <p class="text-dark-gray my-4">Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what

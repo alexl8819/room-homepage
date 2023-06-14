@@ -1,5 +1,9 @@
 import * as sliderItems from './slider-items.json';
 
+import heroImageOne from './images/mobile-image-hero-1.jpg';
+import heroImageTwo from './images/mobile-image-hero-2.jpg';
+import heroImageThree from './images/mobile-image-hero-3.jpg';
+
 document.addEventListener('DOMContentLoaded', () => {
   const items = new Set(sliderItems || []); /* Represent slider items as a set */
   let cursor = 0;
@@ -25,14 +29,21 @@ function applyContent (selected) {
   }
   
   const heroEl = document.querySelector('.slider__hero');
+  let imgUrl;
 
-  for(const [_, className] of heroEl.classList.entries()) {
-    if (className.indexOf('bg-mobile-hero') > -1) {
-      heroEl.classList.remove(className);
-    }
+  switch (selected.hero) {
+    case 1:
+      imgUrl = `url(${heroImageOne})`;
+      break;
+    case 2:
+      imgUrl = `url(${heroImageTwo})`;
+      break;
+    case 3:
+      imgUrl = `url(${heroImageThree})`;
+      break;
   }
 
-  heroEl.classList.add(selected.hero);
+  heroEl.style.backgroundImage = imgUrl;
 
   const headingEl = document.querySelector('.slider__heading');
   const contentEl = document.querySelector('.slider__content');

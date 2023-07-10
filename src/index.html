@@ -22,18 +22,26 @@
     <div class="w-full max-width-xs lg:max-width-5xl">
       <div class="flex flex-col lg:flex-row">
         <header id="slider-hero" class="flex flex-col justify-between w-full h-screen h-96 lg:h-[32rem] bg-no-repeat bg-cover">
-          <nav class="hidden">
-            <ol class="list-style-none flex flex-row">
-              <li>Home</li>
-              <li>Shop</li>
-              <li>About</li>
-              <li>Contact</li>
-            </ol> 
-          </nav>
-          <div class="flex flex-row justify-between w-64 p-8">
-            <input type="checkbox" class="hidden peer" />
-            <img class="lg:hidden w-6" src="./images/icon-hamburger.svg" alt="alt navigation" />
-            <img class="w-auto" src="./images/logo.svg" alt="site logo" />
+          <div class="flex flex-row justify-between lg:justify-start items-center w-64 lg:w-full p-8">
+            <input type="checkbox" class="peer lg:hidden" />
+            <img class="lg:hidden w-6 peer-checked:hidden" src="./images/icon-hamburger.svg" alt="alt navigation" />
+            <img class="w-auto lg:h-3.5 lg:w-16 mr-12 peer-checked:hidden" src="./images/logo.svg" alt="site logo" />
+            <nav class="hidden peer-checked:block lg:block text-white peer-checked:text-black peer-checked:bg-white p-8 lg:p-0">
+              <ol class="list-style-none flex flex-row space-x-8">
+                <li class="lowercase">
+                  <a href="#">Home</a>
+                </li>
+                <li class="lowercase">
+                  <a href="#">Shop</a>
+                </li>
+                <li class="lowercase">
+                  <a href="#">About</a>
+                </li>
+                <li class="lowercase">
+                  <a href="#">Contact</a>
+                </li>
+              </ol> 
+            </nav>
           </div>
           <div class="flex flex-row justify-end">
             <button type="button" id="slider-prev" class="flex justify-center bg-black w-12 p-5">

@@ -21,36 +21,41 @@
   <main class="flex flex-col justify-center items-center min-h-screen font-league-spartan">
     <div class="w-full max-width-xs lg:max-width-5xl">
       <div class="flex flex-col lg:flex-row">
-        <header id="slider-hero" class="flex flex-col justify-between w-full h-96 lg:h-[40rem] bg-no-repeat bg-cover">
-          <div class="flex flex-row justify-between lg:justify-start items-center w-64 lg:w-full p-8">
-            <input type="checkbox" class="peer absolute h-6 w-6 z-20 opacity-0 cursor-pointer lg:hidden checked:-mt-10" />
-            <img class="lg:hidden w-6 peer-checked:hidden" src="./images/icon-hamburger.svg" alt="alt navigation" />
-            <img class="hidden lg:hidden w-6 peer-checked:block -mt-8 z-10" src="./images/icon-close.svg" alt="close navigation" />
-            <img class="w-auto lg:h-3.5 lg:w-16 lg:mr-12 peer-checked:hidden" src="./images/logo.svg" alt="site logo" />
-            <nav class="hidden peer-checked:block lg:block text-white peer-checked:font-bold peer-checked:text-black peer-checked:bg-white -mt-8 lg:mt-0 -ml-12 lg:ml-0 p-10 lg:p-0">
-              <ol class="list-style-none flex flex-row space-x-6 lg:space-x-8 pl-20 lg:pl-0">
-                <li class="lowercase">
-                  <a href="#">Home</a>
-                </li>
-                <li class="lowercase">
-                  <a href="#">Shop</a>
-                </li>
-                <li class="lowercase">
-                  <a href="#">About</a>
-                </li>
-                <li class="lowercase">
-                  <a href="#">Contact</a>
-                </li>
-              </ol> 
-            </nav>
+        <header id="slider-hero" class="w-full bg-no-repeat bg-cover">
+          <div class="lg:hidden flex flex-row justify-center h-0 mt-10 z-10">
+            <img class="w-auto self-center" src="./images/logo.svg" />
           </div>
-          <div class="flex flex-row justify-end lg:-mr-32 z-10">
-            <button type="button" id="slider-prev" class="flex justify-center bg-black w-12 lg:w-16 p-5">
-              <img src="./images/icon-angle-left.svg" alt="arrow left slider button" />
-            </button>
-            <button type="button" id="slider-next" class="flex justify-center bg-black w-12 lg:w-16 p-5">
-              <img src="./images/icon-angle-right.svg" alt="arrow right slider button" />
-            </button>
+          <div class="flex flex-col justify-between h-96 lg:h-[40rem] -mt-10 lg:mt-0">
+            <div class="flex flex-row justify-start items-center w-full p-8 z-20">
+              <input type="checkbox" class="appearance-none peer absolute h-6 w-6 z-20 opacity-0 cursor-pointer lg:hidden checked:-mt-10" />
+              <img class="lg:hidden w-6 peer-checked:hidden" src="./images/icon-hamburger.svg" alt="alt navigation" />
+              <img class="hidden lg:hidden w-6 peer-checked:block -mt-8 z-10" src="./images/icon-close.svg" alt="close navigation" />
+              <img class="hidden lg:block w-auto lg:h-3.5 lg:w-16 lg:mr-12" src="./images/logo.svg" alt="site logo" />
+              <nav class="hidden peer-checked:block lg:block text-white peer-checked:font-bold peer-checked:text-black peer-checked:bg-white -mt-8 lg:mt-0 -ml-12 lg:ml-0 p-10 lg:p-0 pr-20 lg:pr-0">
+                <ol class="list-style-none flex flex-row space-x-6 lg:space-x-8 pl-20 lg:pl-0">
+                  <li class="lowercase">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="lowercase">
+                    <a href="#">Shop</a>
+                  </li>
+                  <li class="lowercase">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="lowercase">
+                    <a href="#">Contact</a>
+                  </li>
+                </ol> 
+              </nav>
+            </div>
+            <div class="flex flex-row justify-end lg:-mr-32 z-10">
+              <button type="button" id="slider-prev" class="flex justify-center bg-black w-12 lg:w-16 p-5">
+                <img src="./images/icon-angle-left.svg" alt="arrow left slider button" />
+              </button>
+              <button type="button" id="slider-next" class="flex justify-center bg-black w-12 lg:w-16 p-5">
+                <img src="./images/icon-angle-right.svg" alt="arrow right slider button" />
+              </button>
+            </div>
           </div>
         </header>
         <section class="flex flex-col justify-center py-12 px-6 lg:px-16 lg:w-2/3">
@@ -81,5 +86,6 @@
     Coded by <a href="#">slightlyfunctional</a>.
   </footer>
   <script type="module" src="slider.js"></script>
+  <script src="nav.js" async></script>
 </body>
 </html>

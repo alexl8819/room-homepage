@@ -18,5 +18,11 @@
         "sourceType": "module"
     },
     "rules": {
+      "tailwindcss/no-custom-classname": [
+        "warn",
+        {
+          "whitelist": ["attribution"]
+        }
+      ]
     }
 }

@@ -14,23 +14,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Bind next/prev buttons
   const nextBtn = document.querySelector('#slider-next');
   const prevBtn = document.querySelector('#slider-prev');
-  const itemArr = Array.from(items);
+  const itemArr = Array.from(items);  
   // Setup listeners
-  nextBtn.addEventListener('click', () => {
+  attachHandler(nextBtn, () => {
     cursor = cursor >= items.size - 1 ? 0 : ++cursor;
     applyContent(itemArr[cursor], isLargeViewport);
-  });
-  prevBtn.addEventListener('click', () => {
+  }, 'R');
+  attachHandler(prevBtn, () => {
     cursor = cursor <= 0 ? items.size - 1 : --cursor;
     applyContent(itemArr[cursor], isLargeViewport);
-  });
+  }, 'L');
   window.addEventListener('resize', () => {
     isLargeViewport = window.innerWidth >= 768 ? true : false;
     applyContent(itemArr[cursor], isLargeViewport);
   });
+  // Execute initial content
   isLargeViewport = window.innerWidth >= 768 ? true : false;
   applyContent(itemArr[cursor], isLargeViewport);
 });
+
+function attachHandler (node, handler, direction) {
+  window.addEventListener('keydown', ({ code }) => {
+    if (code === 'ArrowLeft' && direction === 'L' || code === 'ArrowRight' && direction === 'R') {
+      handler();
+    }
+  });
+  node.addEventListener('click', handler);
+}
 
 function applyContent (selected, isLargeViewport) {
   if (!selected) {

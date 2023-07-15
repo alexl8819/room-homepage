@@ -1,8 +1,6 @@
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {  
-    const navInput = document.querySelector('input[type="checkbox"]');
-    if (navInput.checked) {
-      navInput.checked = false;
-    }
+  const navToggle = document.querySelector('input[type="checkbox"]');
+  if (window.innerWidth >= 768 && navToggle.checked) {  
+    navToggle.checked = false;
   }
 });

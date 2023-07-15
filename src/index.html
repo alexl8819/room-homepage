@@ -23,16 +23,17 @@
       <div class="flex flex-col lg:flex-row">
         <header id="slider-hero" class="w-full bg-cover bg-no-repeat">
           <div class="z-10 mt-10 flex h-0 flex-row justify-center lg:hidden">
-            <img class="w-auto self-center" src="./images/logo.svg" />
+            <img class="w-auto self-center" src="./images/logo.svg" alt="site logo for small viewports" />
           </div>
           <div class="-mt-10 flex h-96 flex-col justify-between md:h-[32rem] lg:mt-0 lg:h-[40rem] xl:h-[67rem]">
             <div class="z-20 flex w-full flex-row items-center justify-start py-8 lg:px-8">
-              <input type="checkbox" class="peer absolute z-30 ml-8 h-6 w-6 cursor-pointer appearance-none opacity-0 checked:-mt-10 lg:hidden" />
+              <label for="toggle" class="sr-only">Navigation Toggle</label>
+              <input id="toggle" name="toggle" type="checkbox" class="peer absolute z-30 ml-8 h-6 w-6 cursor-pointer appearance-none opacity-0 checked:-mt-10 lg:hidden" />
               <img class="ml-7 w-6 peer-checked:hidden lg:ml-0 lg:hidden" src="./images/icon-hamburger.svg" alt="alt navigation" />
               <img class="absolute left-10 z-20 -mt-8 hidden w-6 peer-checked:block lg:hidden" src="./images/icon-close.svg" alt="close navigation" />
-              <img class="hidden w-auto lg:mr-12 lg:block lg:h-3.5 lg:w-16" src="./images/logo.svg" alt="site logo" />
+              <img class="hidden w-auto lg:mr-12 lg:block lg:h-3.5 lg:w-16" src="./images/logo.svg" alt="site logo for large viewports" />
               <div class="absolute inset-0 z-0 hidden bg-black opacity-30 peer-checked:block"></div>
-              <nav class="z-10 -mt-8 hidden w-full p-10 pr-20 text-white peer-checked:block peer-checked:bg-white peer-checked:font-bold peer-checked:text-black lg:mt-0 lg:block lg:p-0">
+              <nav class="z-10 -mt-8 hidden w-full p-10 pr-20 text-white peer-checked:block peer-checked:bg-white peer-checked:font-bold peer-checked:text-black lg:mt-0 lg:block lg:p-0" aria-label="Main Navigation">
                 <ol class="flex list-none flex-row space-x-6 pl-20 lg:space-x-8 lg:pl-0">
                   <li class="lowercase">
                     <a href="#">Home</a>

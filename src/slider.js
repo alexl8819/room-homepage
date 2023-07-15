@@ -10,7 +10,8 @@ import dsHeroImageThree from './images/desktop-image-hero-3.jpg';
 document.addEventListener('DOMContentLoaded', () => {
   const items = new Set(sliderItems || []); /* Represent slider items as a set */
   let cursor = 0;
-  let isLargeViewport = false;
+  let isLargeViewport = window.innerWidth >= 768;
+  const heroEl = document.querySelector('#hero-slider');
   // Bind next/prev buttons
   const nextBtn = document.querySelector('#slider-next');
   const prevBtn = document.querySelector('#slider-prev');
@@ -18,19 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup listeners
   attachHandler(nextBtn, () => {
     cursor = cursor >= items.size - 1 ? 0 : ++cursor;
-    applyContent(itemArr[cursor], isLargeViewport);
+    applyContent(heroEl, itemArr[cursor], isLargeViewport);
   }, 'R');
   attachHandler(prevBtn, () => {
     cursor = cursor <= 0 ? items.size - 1 : --cursor;
-    applyContent(itemArr[cursor], isLargeViewport);
+    applyContent(heroEl, itemArr[cursor], isLargeViewport);
   }, 'L');
   window.addEventListener('resize', () => {
-    isLargeViewport = window.innerWidth >= 768 ? true : false;
-    applyContent(itemArr[cursor], isLargeViewport);
+    isLargeViewport = window.innerWidth >= 768;
+    applyContent(heroEl, itemArr[cursor], isLargeViewport);
   });
   // Execute initial content
-  isLargeViewport = window.innerWidth >= 768 ? true : false;
-  applyContent(itemArr[cursor], isLargeViewport);
+  applyContent(heroEl, itemArr[cursor], isLargeViewport);
 });
 
 function attachHandler (node, handler, direction) {
@@ -42,12 +42,11 @@ function attachHandler (node, handler, direction) {
   node.addEventListener('click', handler);
 }
 
-function applyContent (selected, isLargeViewport) {
+function applyContent (to, selected, isLargeViewport) {
   if (!selected) {
     throw new Error('Invalid item selected: null or undefined');
   }
   
-  const heroEl = document.querySelector('#slider-hero');
   let imgUrl;
 
   switch (selected.hero) {
@@ -62,7 +61,7 @@ function applyContent (selected, isLargeViewport) {
       break;
   }
 
-  heroEl.style.backgroundImage = imgUrl;
+  to.style.backgroundImage = imgUrl;
 
   const headingEl = document.querySelector('#slider-heading');
   const contentEl = document.querySelector('#slider-content');

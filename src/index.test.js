@@ -1,4 +1,4 @@
-import { fireEvent, getByLabelText, getByRole, getByText } from '@testing-library/dom';
+import { fireEvent, getByLabelText } from '@testing-library/dom';
 import '@testing-library/jest-dom/extend-expect';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
@@ -27,21 +27,5 @@ describe('index.html', () => {
     const prevBtn = container.querySelector('#slider-prev'); // getByLabelText(container, { name: 'previous-slide-action' });
     fireEvent.click(prevBtn);
     expect(container.querySelector('#slider-heading')).toHaveTextContent('Manufactured with the best materials');
-  })
-
-  /*it('renders a new paragraph via JavaScript when the button is clicked', async () => {
-    const button = getByText(container, 'Click me for a terrible pun')
-    
-    fireEvent.click(button)
-    let generatedParagraphs = container.querySelectorAll('#pun-container p')
-    expect(generatedParagraphs.length).toBe(1)
-
-    fireEvent.click(button)
-    generatedParagraphs = container.querySelectorAll('#pun-container p')
-    expect(generatedParagraphs.length).toBe(2)
-
-    fireEvent.click(button)
-    generatedParagraphs = container.querySelectorAll('#pun-container p')
-    expect(generatedParagraphs.length).toBe(3)
-  })*/
-})
+  });
+});

@@ -25,8 +25,8 @@
           <div class="z-10 mt-10 flex h-0 flex-row justify-center lg:hidden">
             <img class="w-auto self-center" src="./images/logo.svg" alt="site logo for small viewports" />
           </div>
-          <div class="-mt-10 flex h-96 flex-col justify-between md:h-[32rem] lg:mt-0 lg:h-[40rem] 2xl:h-[67rem]">
-            <div class="z-20 flex w-full flex-row items-center justify-start py-8 lg:py-16 lg:px-20 2xl:px-32">
+          <div class="-mt-10 flex h-96 flex-col justify-between md:h-[32rem] lg:mt-0 2xl:h-[67rem]">
+            <div class="z-20 flex w-full flex-row items-center justify-start py-8 lg:px-16 lg:py-10 2xl:px-32">
               <label for="toggle" class="sr-only">Navigation Toggle</label>
               <input id="toggle" name="toggle" type="checkbox" class="peer absolute z-30 ml-7 h-6 w-6 cursor-pointer appearance-none opacity-0 checked:-mt-10 checked:ml-10 lg:hidden" />
               <button type="button" class="peer-checked:hidden lg:hidden" aria-controls="site-navigation">
@@ -35,7 +35,7 @@
               <button type="button" class="absolute left-10 z-20 hidden peer-checked:block" aria-controls="site-navigation">
                 <img class="-mt-8 w-6" src="./images/icon-close.svg" alt="close navigation" />
               </button>
-              <img class="hidden w-auto lg:mr-12 lg:block lg:h-3.5 lg:w-16" src="./images/logo.svg" alt="site logo for large viewports" />
+              <img class="hidden w-auto lg:mr-14 lg:block lg:h-3.5 lg:w-16" src="./images/logo.svg" alt="site logo for large viewports" />
               <div class="absolute inset-0 z-0 hidden bg-black opacity-30 peer-checked:block"></div>
               <nav id="site-navigation" class="z-10 -mt-8 hidden w-full p-10 pr-20 text-white peer-checked:block peer-checked:bg-white peer-checked:font-bold peer-checked:text-black lg:mt-0 lg:block lg:p-0" aria-label="Site Navigation">
                 <ol class="flex list-none flex-row space-x-6 pl-20 lg:space-x-8 lg:pl-0">
@@ -54,31 +54,31 @@
                 </ol>
               </nav>
             </div>
-            <div class="z-10 flex flex-row justify-end lg:-mr-32">
-              <button type="button" id="slider-prev" class="flex w-12 justify-center bg-black p-5 lg:w-16" aria-controls="hero-slider" aria-label="previous-slide-action">
+            <div class="z-10 flex flex-row justify-end lg:-mr-40">
+              <button type="button" id="slider-prev" class="flex w-12 justify-center bg-black p-5 lg:w-20 lg:p-7" aria-controls="hero-slider" aria-label="previous-slide-action">
                 <img src="./images/icon-angle-left.svg" alt="slider prev button" />
               </button>
-              <button type="button" id="slider-next" class="flex w-12 justify-center bg-black p-5 lg:w-16" aria-controls="hero-slider" aria-label="next-slide-action">
+              <button type="button" id="slider-next" class="flex w-12 justify-center bg-black p-5 lg:w-20 lg:p-7" aria-controls="hero-slider" aria-label="next-slide-action">
                 <img src="./images/icon-angle-right.svg" alt="slider next button" />
               </button>
             </div>
           </div>
         </header>
-        <section class="flex flex-col justify-center px-6 py-12 lg:w-2/3 lg:px-16">
-          <h1 id="slider-heading" class="text-4xl font-semibold tracking-tight lg:text-5xl">Discover innovative ways to decorate</h1>
-          <p id="slider-content" class="my-4 text-dark-gray">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
-          <button type="button" class="flex flex-row items-center">
+        <section class="flex flex-col justify-center px-6 py-12 lg:w-2/3 lg:px-24 lg:py-0">
+          <h1 id="slider-heading" class="text-4xl font-semibold tracking-tight lg:-mt-10 lg:pb-2 lg:text-5xl">Discover innovative ways to decorate</h1>
+          <p id="slider-content" class="my-4 text-dark-gray lg:my-0 lg:pb-2">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+          <button type="button" class="flex flex-row items-center lg:pt-2">
             <span class="uppercase tracking-[.75em]">Shop now</span>
             <img class="ml-4 h-2.5 w-10" src="./images/icon-arrow.svg" alt="right arrow icon" />
           </button>
         </section>
       </div>      
-      <div class="flex w-full flex-col lg:flex-row">
+      <div class="flex w-full flex-col md:flex-row">
         <img src="./images/image-about-dark.jpg" alt="about description showing table in the dark" />
-        <section class="px-6 py-12 lg:px-12">
+        <section class="px-6 py-12 lg:px-9 lg:py-16">
           <h2 class="text-sm font-bold uppercase tracking-[.45em] lg:text-base">About our furniture</h2>
   
-          <p class="my-4 text-dark-gray">Our multifunctional collection blends design and function to suit your individual taste.
+          <p class="my-4 text-dark-gray lg:my-2">Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what
           inspires you. Find the furniture pieces you need, from traditional to contemporary styles
           or anything in between. Product specialists are available to help you create your dream space.</p>

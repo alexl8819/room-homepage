@@ -53,6 +53,9 @@ that does not fully cover the viewport (bug). I decided to use no JS framework f
 
 As always the goal is to write a readable (easy to understand), clean (linted) and tested codebase. I will be focusing on performance metrics again soon and begin to implement SEO into future projects. Some people have asked may why I continue to use Parcel when Vite or esbuild is available? My answer is simple, I find Parcel's zero configuration useful as my go-to "quick to prototype" when building something simple that would not require much complexity. If the project requirements call for more advanced tooling or bundlers then I use a more suitable choice when necessary.
 
+### TODO
+- Working tests
+
 ## Author
 
 - Frontend Mentor - [@alexl8819](https://www.frontendmentor.io/profile/slightly-functional)

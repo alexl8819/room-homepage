@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup listeners
   attachHandler(nextBtn, () => {
     cursor = cursor >= items.size - 1 ? 0 : ++cursor;
-    applyContent(heroEl, itemArr[cursor], isLargeViewport);
+    applyContent(heroEl, itemArr, cursor, isLargeViewport);
   }, 'R');
   attachHandler(prevBtn, () => {
     cursor = cursor <= 0 ? items.size - 1 : --cursor;
-    applyContent(heroEl, itemArr[cursor], isLargeViewport);
+    applyContent(heroEl, itemArr, cursor, isLargeViewport);
   }, 'L');
   window.addEventListener('resize', () => {
     isLargeViewport = window.innerWidth >= 768;
-    applyContent(heroEl, itemArr[cursor], isLargeViewport);
+    applyContent(heroEl, itemArr, cursor, isLargeViewport);
   });
   // Execute initial content
-  applyContent(heroEl, itemArr[cursor], isLargeViewport);
+  applyContent(heroEl, itemArr, cursor, isLargeViewport);
 });
 
 function attachHandler (node, handler, direction) {
@@ -42,21 +42,21 @@ function attachHandler (node, handler, direction) {
   node.addEventListener('click', handler);
 }
 
-function applyContent (to, selected, isLargeViewport) {
-  if (!selected) {
-    throw new Error('Invalid item selected: null or undefined');
+function applyContent (to, content, selected, isLargeViewport) {
+  if (!Array.isArray(content)) {
+    throw new Error('Invalid content: Not an array');
   }
   
   let imgUrl;
 
-  switch (selected.hero) {
-    case 1:
+  switch (selected) {
+    case 0:
       imgUrl = `url(${!isLargeViewport ? mbHeroImageOne : dsHeroImageOne})`;
       break;
-    case 2:
+    case 1:
       imgUrl = `url(${!isLargeViewport ? mbHeroImageTwo : dsHeroImageTwo})`;
       break;
-    case 3:
+    case 2:
       imgUrl = `url(${!isLargeViewport ? mbHeroImageThree : dsHeroImageThree})`;
       break;
   }
@@ -66,6 +66,6 @@ function applyContent (to, selected, isLargeViewport) {
   const headingEl = document.querySelector('#slider-heading');
   const contentEl = document.querySelector('#slider-content');
 
-  headingEl.innerText = selected.heading;
-  contentEl.innerText = selected.content;
+  headingEl.innerText = content[selected].heading;
+  contentEl.innerText = content[selected].content;
 }

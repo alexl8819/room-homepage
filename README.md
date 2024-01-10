@@ -47,7 +47,7 @@ Users should be able to:
 ### What I learned
 
 This was my first actual attempt of writing my own mobile nav without the use of a third party library. I am ok with it overall however I definitely think there could be improvements such as the translucent mask
-that does not fully cover the viewport (admittedly a bug). I also decided to use no JS framework for this one as I wanted to go as bare-bones as possible and rely mainly on CSS. I want to prove that you don't always need to use a framework to stay within the KISS principle.
+that does not fully cover the viewport (admittedly a bug). I also decided to use no JS framework for this one as I wanted to go as bare-bones as possible and rely mainly on CSS.
 
 ### Continued development
 
